@@ -3,7 +3,8 @@ import GalleryClient from "@/components/GalleryClient";
 // Fetch data from your Express backend
 async function getAnimeList() {
   // Using cache: 'no-store' ensures it fetches fresh data while we develop
-  const res = await fetch("http://localhost:5000/api/anime", {
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+  const res = await fetch(`${apiUrl}/anime`, {
     cache: "no-store",
   });
 

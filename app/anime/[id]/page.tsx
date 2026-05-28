@@ -3,7 +3,8 @@ import { notFound } from "next/navigation";
 
 // Fetch the specific anime from your Express backend
 async function getAnimeDetails(id: string) {
-  const res = await fetch(`http://localhost:5000/api/anime/${id}`, {
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+  const res = await fetch(`${apiUrl}/anime/${id}`, {
     cache: "no-store", // Keeps data fresh during development
   });
 
