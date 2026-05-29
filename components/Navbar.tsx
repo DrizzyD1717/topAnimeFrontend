@@ -37,7 +37,7 @@ export default function Navbar() {
             </Link>
             {/* We will leave this as a placeholder for when we add the Admin feature later */}
             <Link
-              href="#"
+              href="/admin/dashboard"
               className="text-neutral-500 hover:text-neutral-300 px-3 py-2 rounded-md text-sm font-medium transition-colors cursor-not-allowed"
             >
               Admin
